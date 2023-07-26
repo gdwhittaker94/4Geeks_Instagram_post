@@ -1,0 +1,149 @@
+/* Default Stylings */
+
+*,
+body,
+*::before,
+*::after {
+padding: 0;
+margin: 0;
+border: 0;
+/*Remove the margin, padding and border of all elements (all browsers)*/
+font-size: 10px;
+/*10px = 1em -> pixel size/10 = #em (16px=1.6em)*/
+box-sizing: border-box;
+/*The full area/size of an element`s box is measured by its total height and width, not just the content section. The different box sections adjust to the defined box size */
+}
+
+main {
+display: block;
+/*Render main element consistently (IE)*/
+}
+
+h1 {
+font-size: 2em;
+margin: 0 0;
+/*Correct font-size and margin for h1 elements within section and article contexts (Chrome, Firefox, Safari) */
+}
+
+img {
+border-style: none;
+/*Remove the border on images inside links (IE10)*/
+max-inline-size: 100%;
+/*Make image responsive but without allowing it to outgrow its original size*/
+display: block;
+/*Removes the small gap that appears under images */
+}
+
+hr {
+box-sizing: content-box;
+height: 0;
+/*Add the correct box-sizing (Firefox)*/
+overflow: visible;
+/*Show overflow (Edge, IE)*/
+}
+
+pre {
+font-family: monospace, monospace;
+/*Correct the inheritance and scaling of font size in all browsers*/
+font-size: 1em;
+/*Correct the odd em font sizing in all browsers.*/
+}
+
+a {
+background-color: transparent;
+/*Remove the gray background on active links (IE10)*/
+}
+
+a,
+li,
+:link,
+:visited {
+text-decoration: none;
+/*Remove default link underline styling*/
+}
+
+ul,
+ol {
+list-style: none;
+/*List markers are not commonly needed*/
+}
+
+b,
+strong {
+font-weight: bolder;
+/*Add the correct font weight (Chrome, Edge, Safari)*/
+}
+
+/* Custom Stylings */
+
+:root {
+    --roboto: 'Roboto', sans-serif; /* 400, 500 */
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
+}
+
+.card {
+    border: 2px solid rgb(0, 0, 0);
+    width: min(70%, 500px);
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.card:hover {
+    transform: scale(1.02);
+    transition: transform 300ms;
+}
+
+i::before {
+    color: black;
+    font-size: 2.7rem;
+    padding: 5px;
+}
+
+.fa-html5::before {
+    font-size: 2.4rem;
+    padding-top: none;
+}
+
+.card__header {
+    display: flex;
+    align-items: center;
+    padding: 7px;
+}
+
+.card__infoText {
+    margin-left: 5px;
+    margin-right: auto;
+}
+
+.card__infoText b, .card__infoText p {
+    font-size: 1.2rem;
+}
+
+.card__icons {
+    padding: 5px;
+    margin-bottom: 15px;
+    margin-top: 10px;
+    display: flex;
+}
+
+.fa-paper-plane {
+    margin-right: auto;
+}
+
+.card__likes, .card__description {
+    padding-inline: 13px;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.card__likes b {
+    font-size: 1.4rem;
+}
